@@ -1,0 +1,12 @@
+[build]
+  functions = "netlify/functions"
+
+# The function's source file sits inside the folder that gets dragged to Netlify,
+# so Netlify would also serve it as a plain static file at /netlify/functions/...
+# That leaks internal logic to anyone who guesses the path. Block that path; the
+# function itself is unaffected and stays reachable at /.netlify/functions/scan-receipt.
+[[redirects]]
+  from = "/netlify/*"
+  to = "/index.html"
+  status = 404
+  force = true

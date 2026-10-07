@@ -1,0 +1,8 @@
+.DS_Store
+.claude/
+.env*
+node_modules/
+
+# Personal data: stays on this computer, never uploaded
+the-board-backup-*.json
+fix-wife-household.sql
